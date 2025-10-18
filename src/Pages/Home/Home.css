@@ -1,0 +1,237 @@
+.home {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* push content below fixed navbar */
+  padding-top: 64px; /* same height as navbar */
+
+  /* Center content vertically & horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  max-width: 700px;
+}
+
+.home-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.home-subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.4;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+/* Uiverse.io button — rename to .fancy-button */
+.fancy-button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fancy-button::after,
+.fancy-button::before {
+  content: "";
+  position: absolute;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.fancy-button::after {
+  top: -10px;
+}
+.fancy-button::before {
+  top: 80%;
+}
+
+.fancy-button:hover::before,
+.fancy-button:hover::after {
+  transform: scale(0);
+}
+
+.fancy-button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+
+
+
+  
+  #fold-button {
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  
+  #fold-button::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(33,33,33,1) 0%,
+      rgba(33,33,33,1) 50%,
+      rgba(150,4,31,1) 50%,
+      rgba(191,4,38,1) 60%
+    );
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: width 0.3s, height 0.3s;
+  }
+  
+  #fold-button:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  #fold-button:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+
+
+
+
+
+
+
+
+
+  .shake {
+    position: relative;
+    margin: 0;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  .shake:hover {
+    animation: sh0 0.5s ease-in-out both;
+  }
+  
+  @keyframes sh0 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  .shake:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+  
+  .shake::before,
+  .shake::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1),
+                opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+  }
+  
+  .shake:hover::before,
+  .shake:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1),
+                opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  .shake:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+  }
+  
+  .shake:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+  }

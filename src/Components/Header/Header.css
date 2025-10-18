@@ -1,0 +1,79 @@
+.header {
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Dark overlay for clarity */
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+  }
+  
+  /* Center text and buttons */
+  .header-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Title */
+  .header-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Subtitle */
+  .header-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: 28px;
+    line-height: 1.4;
+    max-width: 700px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Buttons container */
+  .header-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+ 
+  
+  /* Responsive: make sure text stays centered and scales well */
+  @media (max-width: 600px) {
+    .header-title {
+      font-size: 2rem;
+    }
+  
+    .header-subtitle {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  
+    .header-btn {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+  }

@@ -1,0 +1,122 @@
+.navbar {
+  background: transparent; /* Transparent background */
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔹 Container layout */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 🔹 Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; /* White text */
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* 🔹 Navigation links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700; /* Gold underline */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #FFD700; /* Gold hover effect */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/* 🔹 Mobile menu toggle (hamburger) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white; /* White icon */
+  z-index: 1100; /* Stay above dropdown */
+  transition: color 0.3s ease;
+}
+
+/* 🔹 Mobile responsive menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay background */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .nav-link:hover {
+    color: #FFD700;
+  }
+}
+
+/* 🔹 Optional: Add slight solid background on scroll */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
