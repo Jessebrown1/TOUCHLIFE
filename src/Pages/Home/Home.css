@@ -1,17 +1,21 @@
 .home {
+  padding-top: 80px; /* Adjust this if your navbar height differs */
+}
+.home {
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  /* push content below fixed navbar */
-  padding-top: 64px; /* same height as navbar */
+
+  /* Remove padding-top so the navbar sits at the top correctly */
+  padding-top: 0;
 
   /* Center content vertically & horizontally */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
   text-align: center;
   overflow: hidden;
 }
@@ -30,8 +34,7 @@
   position: relative;
   z-index: 1;
   color: white;
-  padding: 20px;
-  max-width: 700px;
+
 }
 
 .home-title {
@@ -49,11 +52,11 @@
 
 .button-group {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 26px;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* align vertically */
+  gap: 1rem;                /* space between buttons */
+  flex-wrap: wrap;          /* ensures good spacing on smaller screens */
+  margin-top: 26px;         /* optional, for visual breathing room */
 }
 
 /* Uiverse.io button — rename to .fancy-button */

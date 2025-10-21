@@ -84,39 +84,46 @@
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    color: white;
+    font-size: 2rem;
+    z-index: 1200;
+    background: none;
+    border: none;
   }
 
   .nav-links {
-    position: absolute;
-    top: 0px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Dark overlay background */
+    height: 100vh; /* fills the screen */
+    background: rgba(0, 0, 0, 0.9); /* transparent dark overlay */
+    backdrop-filter: blur(6px); /* optional soft blur effect */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
+    gap: 2rem;
     display: none;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1100;
   }
 
   .nav-links.open {
     display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
 
   .nav-link:hover {
     color: #FFD700;
   }
-}
-
-/* 🔹 Optional: Add slight solid background on scroll */
-.navbar.scrolled {
-  background: rgba(0, 0, 0, 0.75);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }

@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className="pt-16"> {/* to avoid overlap from fixed navbar */}
+      <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
