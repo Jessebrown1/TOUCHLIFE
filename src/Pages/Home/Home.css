@@ -238,3 +238,285 @@
   .shake:hover::after {
     transform: translate(50%, 0) scale(1.1);
   }
+
+
+
+
+  /* ================================
+   INTRODUCTION SECTION
+=================================== */
+
+.intro-section {
+  background-color: #fff;
+  color: #0f172a;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.intro-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* Info Boxes */
+.intro-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+}
+
+.intro-info div {
+  background-color: #f5f7ff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-info div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.intro-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.intro-info p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .intro-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro-content p {
+    font-size: 1rem;
+  }
+
+  .intro-info {
+    gap: 20px;
+  }
+
+  .intro-info div {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* ================================
+   MINISTRIES SECTION
+=================================== */
+
+.ministries-section {
+  background-color: #fafafa;
+  color: #0f172a;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.ministries-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ministries-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+.ministries-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cards grid */
+.ministries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.ministry-card {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  transition: all 0.3s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ministry-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.ministry-card h3 {
+  font-size: 1.25rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.ministry-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Button */
+.view-all-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #1a237e;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #303f9f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ministries-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ministry-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .ministries-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .ministries-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Worship Section */
+.worship-section {
+  background-color: #f9fafc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.worship-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.worship-times {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.worship-times ul {
+  list-style: none;
+  padding: 0;
+}
+
+.worship-times li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.direction-btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.direction-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.map-container {
+  flex: 1;
+  min-width: 280px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .worship-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .worship-times {
+    text-align: center;
+  }
+}
