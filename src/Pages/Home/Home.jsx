@@ -1,15 +1,21 @@
 import "./Home.css";
 import churchBg from "../../assets/churchBg.jpeg";
+import tlife from "../../assets/tlife.mp4"
 
 
 function Home() {
   return (
     <>
       {/* ✅ HERO SECTION */}
-      <div
-        className="home"
-        style={{ backgroundImage: `url(${churchBg})` }}
-      >
+      <div className="vid">
+        <video
+          src={tlife}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="vid-bg"
+        />
         <div className="overlay"></div>
 
         <div className="home-content">
