@@ -9,12 +9,13 @@ function Home() {
       {/* ✅ HERO SECTION */}
       <div className="vid">
         <video
+          className="vid-bg"
           src={tlife}
           autoPlay
           loop
           muted
           playsInline
-          className="vid-bg"
+          preload="auto"
         />
         <div className="overlay"></div>
 
