@@ -45,7 +45,7 @@
             {/* ✅ Church Info */}
             <div className="footer-section">
             <h3>Touchlife Deliverance Ministry</h3>
-            <p>Community 7, Tema, Accra, Ghana</p>
+            <p>Community 25, Tema, Accra, Ghana</p>
             <p>Sunday Service: 9:00 AM – 12:00 PM</p>
             <p>Wednesday Prayer: 6:30 PM – 8:00 PM</p>
             </div>
