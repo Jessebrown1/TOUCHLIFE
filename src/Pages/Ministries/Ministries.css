@@ -1,0 +1,116 @@
+/* 🔹 Hero Section */
+.ministries-hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .ministries-hero .hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -2;
+  }
+  
+  .ministries-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+  }
+  
+  .ministries-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ministries-hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #f3f3f3;
+  }
+  
+  /* 🔹 Ministries Section */
+  .ministries-section {
+    padding: 5rem 1rem;
+    background: #fafafa;
+  }
+  
+  .ministries-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .ministries-container h2 {
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 3rem;
+  }
+  
+  /* 🔹 Ministries Grid */
+  .ministries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .ministry-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .ministry-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .ministry-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+  
+  .ministry-card h3 {
+    font-size: 1.4rem;
+    color: #222;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .ministry-card p {
+    color: #666;
+    font-size: 1rem;
+    padding: 0 1.2rem 1.5rem;
+    line-height: 1.6;
+  }
+  
+  /* 🔹 Responsive */
+  @media (max-width: 768px) {
+    .ministries-hero-content h1 {
+      font-size: 2.3rem;
+    }
+  
+    .ministries-hero-content p {
+      font-size: 1rem;
+    }
+  
+    .ministries-section {
+      padding: 3rem 1rem;
+    }
+  }
+  
